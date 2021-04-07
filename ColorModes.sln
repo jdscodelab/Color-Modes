@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorModes", "ColorModes.csproj", "{D4617913-9AFD-45AA-B2EF-ED3EC6CABDF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4617913-9AFD-45AA-B2EF-ED3EC6CABDF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4617913-9AFD-45AA-B2EF-ED3EC6CABDF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4617913-9AFD-45AA-B2EF-ED3EC6CABDF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4617913-9AFD-45AA-B2EF-ED3EC6CABDF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33D1CCE1-61FD-4BC4-B81C-6C7B84DE9FB8}
+	EndGlobalSection
+EndGlobal

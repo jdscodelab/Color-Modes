@@ -1,0 +1,208 @@
+﻿<Application x:Class="ColorModes.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ColorModes"
+             xmlns:properties="clr-namespace:ColorModes.Properties"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+        <!--styling our window-->
+        <Style TargetType="{x:Type Window}" x:Key="WindowStyle">
+            <Style.Triggers>
+
+                <!--first we will have to check which mode user wants to switch to by default we selected light in settings here... what we want is 
+                when user selects the radio button for dark the ui should sweitch to dark mode n so on..-->
+
+                <!--Lets bind our settings property first-->
+                <!--#region Black Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Black">
+                    <Setter Property="Background" Value="Black"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region Dark Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Dark">
+                    <Setter Property="Background" Value="#363C49"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region Light Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Light">
+                    <Setter Property="Background" Value="LightGray"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region White Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="White">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </DataTrigger>
+                <!--#endregion-->
+            </Style.Triggers>
+        </Style>
+
+
+        <!--here we will do the styling of our ui elements to switch from modes (black, dark, light & white)-->
+        <Style TargetType="{x:Type Button}">
+            <Style.Triggers>
+                
+                <!--first we will have to check which mode user wants to switch to by default we selected light in settings here... what we want is 
+                when user selects the radio button for dark the ui should sweitch to dark mode n so on..-->
+                
+                <!--Lets bind our settings property first-->
+                <!--#region Black Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Black">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </DataTrigger>           
+                <!--#endregion-->
+
+                <!--#region Dark Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Dark">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+                    <Setter Property="Foreground" Value="Teal"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region Light Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Light">
+                    <Setter Property="Background" Value="Teal"/>
+                    <Setter Property="BorderBrush" Value="Teal"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region White Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="White">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </DataTrigger>
+                <!--#endregion-->
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="{x:Type GroupBox}">
+            <Style.Triggers>
+
+                <!--first we will have to check which mode user wants to switch to by default we selected light in settings here... what we want is 
+                when user selects the radio button for dark the ui should sweitch to dark mode n so on..-->
+
+                <!--Lets bind our settings property first-->
+                <!--#region Black Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Black">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region Dark Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Dark">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Teal"/>
+                    <Setter Property="Foreground" Value="Teal"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region Light Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Light">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Teal"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region White Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="White">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </DataTrigger>
+                <!--#endregion-->
+            </Style.Triggers>
+        </Style>
+
+
+        <Style TargetType="{x:Type TextBox}">
+            <Style.Triggers>
+
+                <!--first we will have to check which mode user wants to switch to by default we selected light in settings here... what we want is 
+                when user selects the radio button for dark the ui should sweitch to dark mode n so on..-->
+
+                <!--Lets bind our settings property first-->
+                <!--#region Black Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Black">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region Dark Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Dark">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Teal"/>
+                    <Setter Property="Foreground" Value="Teal"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region Light Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Light">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Teal"/>
+                    <Setter Property="Foreground" Value="Teal"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region White Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="White">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </DataTrigger>
+                <!--#endregion-->
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="{x:Type RadioButton}">
+            <Style.Triggers>
+
+                <!--first we will have to check which mode user wants to switch to by default we selected light in settings here... what we want is 
+                when user selects the radio button for dark the ui should sweitch to dark mode n so on..-->
+
+                <!--Lets bind our settings property first-->
+                <!--#region Black Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Black">
+                    <Setter Property="Foreground" Value="White"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region Dark Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Dark">
+                    <Setter Property="Foreground" Value="Teal"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region Light Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Light">
+                    <Setter Property="Foreground" Value="Teal"/>
+                </DataTrigger>
+                <!--#endregion-->
+
+                <!--#region White Mode-->
+                <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="White">
+                    <Setter Property="Foreground" Value="Black"/>
+                </DataTrigger>
+                <!--#endregion-->
+            </Style.Triggers>
+        </Style>
+
+
+    </Application.Resources>
+</Application>
